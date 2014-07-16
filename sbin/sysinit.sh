@@ -37,6 +37,7 @@ fi
 #Init.d 
 /sbin/busybox mkdir -p /system/etc/init.d
 /sbin/busybox chown -R root.root /system/etc/init.d
-/sbin/busybox chmod -R 0755 /system/etc/init.d
+/sbin/busybox chmod -R 0777 /system/etc/init.d
+/sbin/busybox chmod -R 0777 /system/etc/init.d/*
 /system/bin/logwrapper /sbin/busybox run-parts /system/etc/init.d
 touch /data/local/tmp/sysinit.txt
